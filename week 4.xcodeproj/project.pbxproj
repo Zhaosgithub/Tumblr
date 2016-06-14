@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E94230A51D0FAC830096B503 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94230A41D0FAC830096B503 /* FeedViewController.swift */; };
+		E94230A71D0FB3AD0096B503 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94230A61D0FB3AD0096B503 /* homeViewController.swift */; };
 		E96887D31D078E6200CCF0B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96887D21D078E6200CCF0B5 /* AppDelegate.swift */; };
 		E96887D51D078E6200CCF0B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96887D41D078E6200CCF0B5 /* ViewController.swift */; };
 		E96887D81D078E6200CCF0B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96887D61D078E6200CCF0B5 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E94230A41D0FAC830096B503 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		E94230A61D0FB3AD0096B503 /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		E96887CF1D078E6200CCF0B5 /* week 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96887D21D078E6200CCF0B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96887D41D078E6200CCF0B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				E96887D21D078E6200CCF0B5 /* AppDelegate.swift */,
 				E96887D41D078E6200CCF0B5 /* ViewController.swift */,
 				E96887D61D078E6200CCF0B5 /* Main.storyboard */,
+				E94230A61D0FB3AD0096B503 /* homeViewController.swift */,
+				E94230A41D0FAC830096B503 /* FeedViewController.swift */,
 				E96888001D078E8600CCF0B5 /* FirstViewController.swift */,
 				E96887D91D078E6200CCF0B5 /* Assets.xcassets */,
 				E96887DB1D078E6200CCF0B5 /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 			files = (
 				E96888011D078E8600CCF0B5 /* FirstViewController.swift in Sources */,
 				E96887D51D078E6200CCF0B5 /* ViewController.swift in Sources */,
+				E94230A51D0FAC830096B503 /* FeedViewController.swift in Sources */,
+				E94230A71D0FB3AD0096B503 /* homeViewController.swift in Sources */,
 				E96887D31D078E6200CCF0B5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +494,7 @@
 				E96887F91D078E6200CCF0B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E96887FA1D078E6200CCF0B5 /* Build configuration list for PBXNativeTarget "week 4Tests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				E96887FC1D078E6200CCF0B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E96887FD1D078E6200CCF0B5 /* Build configuration list for PBXNativeTarget "week 4UITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +512,7 @@
 				E96887FF1D078E6200CCF0B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

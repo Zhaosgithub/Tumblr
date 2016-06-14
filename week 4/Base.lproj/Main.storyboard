@@ -22,16 +22,7 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v4L-zA-c4F">
-                                        <rect key="frame" x="0.0" y="7" width="63" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <state key="normal" image="home_icon"/>
-                                        <state key="selected" image="home_selected_icon"/>
-                                        <connections>
-                                            <action selector="didTapfirst:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czB-T8-cd9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JNF-t4-D6T">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JNF-t4-D6T">
                                         <rect key="frame" x="71" y="9" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" image="search_icon"/>
@@ -40,7 +31,7 @@
                                             <action selector="didTapTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMe-Bc-aMs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S7a-Sy-5AP">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S7a-Sy-5AP">
                                         <rect key="frame" x="268" y="8" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" image="trending_icon"/>
@@ -57,13 +48,31 @@
                                             <action selector="didTapThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aiR-Aw-h0x"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xy7-DP-EEZ">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xy7-DP-EEZ">
                                         <rect key="frame" x="212" y="8" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" image="account_icon"/>
                                         <state key="selected" image="account_selected_icon"/>
                                         <connections>
                                             <action selector="didTapFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pGJ-il-fAZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="j1Y-EB-JY0">
+                                        <rect key="frame" x="71" y="5" width="35" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" image="search_icon"/>
+                                        <state key="selected" image="search_selected_icon"/>
+                                        <connections>
+                                            <action selector="didTapTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fsx-v3-GCm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v4L-zA-c4F">
+                                        <rect key="frame" x="0.0" y="8" width="63" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" image="home_icon"/>
+                                        <state key="selected" image="home_selected_icon"/>
+                                        <connections>
+                                            <action selector="didTapfirst:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czB-T8-cd9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -74,6 +83,10 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="81q-GF-99M" id="Su7-Cj-WgI"/>
+                        <outletCollection property="buttons" destination="v4L-zA-c4F" collectionClass="NSMutableArray" id="cFD-sg-R8B"/>
+                        <outletCollection property="buttons" destination="j1Y-EB-JY0" collectionClass="NSMutableArray" id="3fq-G2-IQV"/>
+                        <outletCollection property="buttons" destination="Xy7-DP-EEZ" collectionClass="NSMutableArray" id="Z2j-9A-hpN"/>
+                        <outletCollection property="buttons" destination="S7a-Sy-5AP" collectionClass="NSMutableArray" id="oR6-UM-cNb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,6 +113,13 @@
                                 <rect key="frame" x="0.0" y="318" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6kM-QH-Gti">
+                                <rect key="frame" x="260" y="30" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="0vs-AB-RMX" kind="modal" modalTransitionStyle="coverVertical" id="rRG-OA-H3Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -107,6 +127,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sb6-PZ-0D7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-164" y="992"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="heA-1c-PEk">
+            <objects>
+                <viewController id="0vs-AB-RMX" customClass="homeViewController" customModule="week_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XhR-ow-MAU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.65000000000000002" contentMode="scaleToFill" id="FY0-dF-gFs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12567382429999999" green="0.21247389859999999" blue="0.42213147099999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="YLj-31-rjV">
+                                <rect key="frame" x="10" y="285" width="300" height="132"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VtV-yX-dMZ">
+                                <rect key="frame" x="53" y="379" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didPressCancel:" destination="0vs-AB-RMX" eventType="touchUpInside" id="A5T-lJ-0ns"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ji8-Ja-QYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="1718"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5Yp-a1-LkM">
@@ -198,10 +249,10 @@
             </objects>
             <point key="canvasLocation" x="1012" y="992"/>
         </scene>
-        <!--View Controller-->
+        <!--Feed View Controller-->
         <scene sceneID="vW9-4b-wys">
             <objects>
-                <viewController storyboardIdentifier="trendingViewController" id="pvi-6y-qEd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="trendingViewController" id="pvi-6y-qEd" customClass="FeedViewController" customModule="week_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iQa-ir-Dfg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,6 +272,10 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="scrollView" destination="rNW-kd-swu" id="6Kc-bp-ZWV"/>
+                        <outlet property="trendingView" destination="DIh-Wv-yYd" id="hDu-jO-RPl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhE-FH-z2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,6 +294,7 @@
         <image name="home_selected_icon" width="35" height="35"/>
         <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
+        <image name="login_form" width="300" height="132"/>
         <image name="nevermind" width="320" height="53"/>
         <image name="photo_icon" width="75" height="95"/>
         <image name="quote_icon" width="75" height="96"/>

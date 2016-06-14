@@ -11,16 +11,16 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet var buttons: [UIButton]!
     
     var blackViewController: UIViewController!
-    
     var blueViewController: UIViewController!
-    
     var purpleViewController: UIViewController!
-    
     var accountViewController: UIViewController!
-    
     var trendingViewController: UIViewController!
+    
+//    var viewControllers: [UIViewController]!
+//    var selectedIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,8 @@ class FirstViewController: UIViewController {
         //set up accountview child
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("trendingViewController")
         
-        
+//        viewControllers = [blackViewController, blueViewController, accountViewController, trendingViewController]
+
         
         //show the bottom menu
         blackViewController.view.frame = contentView.frame
@@ -58,6 +59,11 @@ class FirstViewController: UIViewController {
         addChildViewController(blackViewController)
         
         // Do any additional setup after loading the view.
+        
+        
+//        buttons[selectedIndex].selected = true
+//        didPressTab(buttons[selectedIndex])
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,6 +106,38 @@ class FirstViewController: UIViewController {
         contentView.addSubview(trendingViewController.view)
         
     }
+    
+    
+    
+//    @IBAction func didPressTab(sender: AnyObject) {
+//        
+//        let previousIndex = selectedIndex
+//        
+//        selectedIndex = sender.tag
+//        
+//        buttons[previousIndex].selected = false
+//        
+//        let previousVC = viewControllers[previousIndex]
+//        
+//        previousVC.willMoveToParentViewController(nil)
+//        previousVC.view.removeFromSuperview()
+//        previousVC.removeFromParentViewController()
+//        
+//        sender.selected = true
+//        
+//        let vc = viewControllers[selectedIndex]
+//        
+//        addChildViewController(vc)
+//        
+//        vc.view.frame = contentView.bounds
+//        contentView.addSubview(vc.view)
+//        
+//        vc.didMoveToParentViewController(self)
+//        
+//        
+//        
+//    }
+    
 
     /*
     // MARK: - Navigation
